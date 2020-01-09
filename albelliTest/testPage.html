@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photo Editor</title>
+    <style>
+        button#done {
+            font-size: 200%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <img id='image' width="100%" src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2019/03/06/105778924-1551913100172gettyimages-1128956984.1910x1000.jpeg" />
+    <button id='done'>Done</button>
+    <script>
+        const url = new URL(window.location.href)
+        const params = new URLSearchParams(window.location.search)
+        const imageId = params.get('imageId')
+        if (imageId) {
+            image.src = 'http://localhost/images/' + imageId
+        }
+
+        done.onclick = function () {
+            // TODO: Handler code here
+        };
+    </script>
+</body>
+</html>
